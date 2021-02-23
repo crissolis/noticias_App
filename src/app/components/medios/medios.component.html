@@ -1,0 +1,48 @@
+<ion-card  *ngFor="let medio of medios">
+  <ion-card-header>
+    <ion-card-subtitle id="sub">{{medio.medio_name}}
+      <!-- {{toTimeZone(noticia.fecha_creacion) | date:'medium'}} -->
+      <!-- {{noticia.fecha_creacion |  date:'medium'}} -->
+
+      <div class="noticia-more" >
+        <ion-button (click)="lanzarMenu(medio)"  fill="clear" shape="round">
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+         </ion-button>
+      </div>
+
+    </ion-card-subtitle>
+
+    <!-- <ion-card-title (click)="abrirNoticia()">{{ medio.nombre }} </ion-card-title> -->
+    <div >
+      <img *ngIf="medio.imagen_url" [src]="medio.imagen_url"  class="imguser">
+      <!-- <ion-img *ngIf="medio.imagen_url" [src]="medio.imagen_url"  class="imguser" ></ion-img> -->
+      <ion-card-title   style="padding: 20px;">{{ medio.nombre }} </ion-card-title>
+    </div>
+    
+  </ion-card-header>
+  <ion-img 
+   *ngIf="medio.banner_url" [src]="medio.banner_url"></ion-img>
+  <ion-card-content>
+    <p>
+      {{medio.description}}
+      <!-- {{ noticia.media_url}} -->
+    </p>
+    <ion-label> <strong>locación :</strong></ion-label>
+    <p *ngIf="medio.location" >
+      <ion-chip>
+        <ion-icon x name="locate" color="primary"></ion-icon>
+        <ion-label color="danger"  >{{medio.location}}</ion-label>
+      </ion-chip>
+    </p>
+    <ion-label> <strong>Enlace :</strong></ion-label>
+    <p *ngIf="medio.url" >
+      <ion-chip>
+        <ion-icon name="locate"  color="primary"></ion-icon>
+        <ion-label color="danger" (click)="abrirEnlaces(medio.url)" >{{medio.url}}</ion-label>
+      </ion-chip>
+    </p>
+   
+  </ion-card-content>
+</ion-card>
+
+

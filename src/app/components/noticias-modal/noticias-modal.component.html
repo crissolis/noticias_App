@@ -1,0 +1,29 @@
+<ion-header [translucent]="true" class="ion-no-border" >
+  <ion-toolbar color="dark">
+    <ion-title>
+      Emcabezados
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="end" color="danger" name="close-circle-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-segment  [value]="categorias[0]"  scrollable mode="md" >
+    <ion-segment-button [value]="categoria" mode="md" 
+    (click)="cargarNoticiasCateg(categoria.medio_id)"  *ngFor="let categoria of categorias">
+      <ion-label  class="ion-text-capitalize">  {{ categoria.nombre }}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-noticias [noticias]="noticias"></app-noticias> 
+
+  <ion-infinite-scroll threshold="25%"  position="bottom" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

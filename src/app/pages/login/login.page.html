@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar( f )" >
+    <div style="padding-top: 100px;">
+    <ion-item class="inp" class="inp" lines="full">
+      <ion-label position="floating">Nick</ion-label>
+      <ion-input  [(ngModel)]="nick" name="nick"  type="text"  required></ion-input>
+    </ion-item>
+
+    <ion-item  class="inp" class="inp" lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input ngModel name="password"  type="password"  required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col style="text-align: center;">
+        <ion-button style="border-radius: 30px;margin-top:40px;" type="submit" color="dark"  >Sign In</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="ion-text-center" size="12">
+          <a  [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+        </ion-col>
+    </ion-row>
+  </div>
+  </form>
+
+
+</ion-content>

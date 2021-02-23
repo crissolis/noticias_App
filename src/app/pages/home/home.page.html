@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Twit News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="auth-form">
+  <div style="padding-top: 100px;">
+  <ion-grid fixed >   
+    <ion-row class="ion-justify-content-center">
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Registrar</ion-button>
+
+        <span class="divider line one-line">or</span>
+
+        <span class="already">Ya estas registrado?</span>
+
+        <ion-button [routerLink]="['/login']" expand="block" color="danger">Inicia sección</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+</div>
+</ion-content>

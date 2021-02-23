@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apikey:'7490eb6283774faea78acce44f96e423',
+  ApiUrl:'http://localhost:3000'
+  //  ApiUrl:'http://noticias-twiiter-api.herokuapp.com'
 };
 
 /*

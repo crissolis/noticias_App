@@ -1,0 +1,34 @@
+<ion-card  >
+  <ion-card-header>
+    <ion-card-subtitle id="sub">{{ noticia.medio_name }}-{{noticia.fecha_creacion | date:'medium'}}
+      <!-- {{toTimeZone(noticia.fecha_creacion) | date:'medium'}} -->
+      <!-- {{noticia.fecha_creacion |  date:'medium'}} -->
+      <div class="noticia-more">
+        <ion-button (click)="lanzarMenu(noticia)"  fill="clear" shape="round">
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+         </ion-button>
+      </div>
+    </ion-card-subtitle>
+
+    <ion-card-title style="size: 12px;" (click)="abrirNoticia()">{{ noticia.nombre }}
+      <img [src]="retornarIcon(noticia.porcentaje)" class="iconoPor" />  
+    </ion-card-title>
+  
+  </ion-card-header>
+  <ion-img (click)="abrirNoticia()"
+   *ngIf="noticia.media_url" [src]="noticia.media_url"></ion-img>
+  <ion-card-content>
+    <p>
+      {{toTex(noticia.contenido)}}
+      <!-- {{ noticia.media_url}} -->
+    </p>
+    <ion-label> <strong>Enlaces :</strong></ion-label>
+    <p  *ngFor="let item of toUrl(noticia.contenido)">
+      <ion-chip>
+        <ion-icon name="pin" color="primary"></ion-icon>
+        <ion-label color="danger" (click)="abrirEnlaces(item)" >{{item}}</ion-label>
+      </ion-chip>
+    </p>
+   
+  </ion-card-content>
+</ion-card>

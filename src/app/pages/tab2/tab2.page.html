@@ -1,0 +1,42 @@
+<ion-header [translucent]="true" class="ion-no-border" >
+  <ion-toolbar  color="dark">
+    <ion-title>
+      Reporte
+    </ion-title>
+    <ion-buttons slot="end">   
+      <ion-button  (click)="presentModal()" expand="block">
+        <ion-icon slot="end" name="globe"></ion-icon>
+      </ion-button>
+      
+        <ion-button  (click)="presentModalR()" expand="block">
+          <ion-icon slot="end" name="pie-chart"></ion-icon>
+        </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-segment  [value]="categorias[0]"  scrollable mode="md" >
+    <ion-segment-button [value]="categoria" mode="md" 
+    (click)="cargarNoticiasCateg(categoria.medio_id,tipo)"  *ngFor="let categoria of categorias">
+      <ion-label  class="ion-text-capitalize">  {{ categoria.nombre }}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+   
+  <ion-segment  [value]="tipos[0]"  scrollable mode="md" >
+    <ion-segment-button [value]="tipo" mode="md" 
+    (click)="selectipo(tipo.id)"  *ngFor="let tipo of tipos; let i=index"> 
+      <ion-label  class="ion-text-capitalize">  {{ tipo.nombre }}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <div *ngFor="let grafico of graficos" style="display: block">
+                <app-grafico-dona  [hola]="hola"
+                [doughnutChartLabels]="grafico.labels"
+                [doughnutChartData]="grafico.data"
+                doughnutChartType="doughnut"
+                 ></app-grafico-dona>     
+    </div> -->
+    <app-noticias [noticias]="noticias"></app-noticias> 
+</ion-content>
