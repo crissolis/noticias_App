@@ -3,6 +3,7 @@ import { NoticiasService } from '../../services/noticia/noticias.service';
 import { RespuestaTopHeadLines, Article, Noticia } from '../../interfaces/interfaces';
 import { ToastController } from '@ionic/angular';
 import { DataLocalService } from '../../services/dataLocal/data-local.service';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-tab1',
@@ -27,8 +28,8 @@ export class Tab1Page implements OnInit {
   this.cargarNoticiasAnt(event);
   }
 
-  cargarNoticias(event?){
-    this.noticiasService.recargar();
+  async cargarNoticias(event?){
+    this.noticiasService.recargar().subscribe(()=>{   
     this.noticias=[];
     this.noticiasService.pages=0;
     console.log(this.noticiasService.pages=0)
@@ -56,6 +57,8 @@ export class Tab1Page implements OnInit {
       }
     
     });
+    } );
+    
   }
 
   

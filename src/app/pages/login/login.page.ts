@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { NoticiasService } from '../../services/noticia/noticias.service';
 import { DataLocalService } from '../../services/dataLocal/data-local.service';
 import { ToastController } from '@ionic/angular';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -42,9 +43,9 @@ export class LoginPage implements OnInit {
     this.noticiasService.login(forma.value.nick,forma.value.password).subscribe(res=>{
       console.log(res);
       if (res.status==="400") {
-        this.presentToast(res.message);
+        this.presentToast(res.message,null);
       }else{
-        this.presentToast("Ingreso existos,bien venido "+res.user[0].nombre);
+        this.presentToast(null,res.user[0].nombre);
        this.datalocal.guardarUsuario(res.user[0]);
        this.router.navigate(['/tab1']);
       }
@@ -57,13 +58,37 @@ export class LoginPage implements OnInit {
     // });
   }
 
-  async presentToast(message:string) {
-    const toast = await this.toastController.create({
-      message,
-      position:'bottom',
-      duration: 2000
-    });
-    toast.present();
+
+  
+   presentToast(message:string,usuario:string) {
+    // const toast = await this.toastController.create({
+    //   message,
+    //   position:'bottom',
+    //   duration: 2000
+    // });
+    // toast.present();
+  
+    if (usuario) {
+      Swal.fire({
+       title: 'Ingreso existos',
+        text:'bien venido '+usuario,
+       icon: 'success',
+       backdrop:false,
+      }
+        
+      ) 
+    }else{
+      Swal.fire({
+        title: 'Error',
+         text:message,
+        icon: 'error',
+        backdrop:false,  
+
+       }
+         
+       )
+    }
+   
   }
 
   

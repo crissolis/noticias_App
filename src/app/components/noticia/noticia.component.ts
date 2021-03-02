@@ -6,6 +6,7 @@ import { ActionSheetController, Platform } from '@ionic/angular';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 import { DataLocalService } from '../../services/dataLocal/data-local.service';
 import { ToastController } from '@ionic/angular';
+import { NoticiasService } from '../../services/noticia/noticias.service';
 
 
 @Component({
@@ -17,13 +18,14 @@ export class NoticiaComponent implements OnInit {
 
   @Input() noticia:Noticia;
   @Input() enFavoritos;
+  favorito:string="";
   constructor(private iab: InAppBrowser,
     private actionSheetController: ActionSheetController,
     private socialSharing: SocialSharing,
     private dataLocaleService:DataLocalService,
     private toastController: ToastController,
     private platform: Platform,
-
+    private noticiaService: NoticiasService,
     ) { }
 
   ngOnInit() {
@@ -42,13 +44,15 @@ export class NoticiaComponent implements OnInit {
     }
   }
 
- async lanzarMenu(noticia?:Noticia){
+
+ async lanzarMenu(noticiaN?:Noticia){
  
   let guardarBorrarBtn;
 
-  let exist=this.dataLocaleService.noticias.find(noticia=>noticia.id===noticia.id)
-
-    if (exist) {
+   let exist=this.dataLocaleService.noticias.find(noticia=>noticia.id===noticiaN.id)
+  // let exist=this.dataLocaleService.enFavorito(noticia);
+  // console.log(exist)
+    if (exist) { 
       guardarBorrarBtn= {
         text: 'Quitar de favorito',
         icon: 'trash',
@@ -56,7 +60,10 @@ export class NoticiaComponent implements OnInit {
         handler: () => {
           console.log('Borrar');
           this.enFavoritos=false;
-        this.dataLocaleService.borrarNoticia(this.noticia);
+          this.noticiaService.eliminarFavorito(noticiaN).subscribe(res=>{
+            this.dataLocaleService.borrarNoticia(noticiaN);
+            console.log(res);
+          });
         this.presentToast("Noticia eliminada");
         
         }
@@ -69,7 +76,10 @@ export class NoticiaComponent implements OnInit {
               cssClass:' action-dark', 
               handler: () => {
                 console.log('Favorite clicked');
-              this.dataLocaleService.guardarNoticias(this.noticia);
+              this.noticiaService.guardarFavorito(noticiaN).subscribe(res=>{
+                this.dataLocaleService.guardarNoticias(noticiaN);
+                console.log(res);
+              });
               this.enFavoritos=true;
               this.presentToast("Se agrego a favoritos");
               }

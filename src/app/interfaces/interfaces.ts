@@ -24,6 +24,7 @@ export interface RespuestaTopHeadLines {
 
   export  interface NoticiaResponse {
   status: string;
+  message?: string;
   noticias: Noticia[];
 }
 

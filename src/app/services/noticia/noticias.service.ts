@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { MedioResponse, NoticiaResponse, RespuestaTopHeadLines, Medio, NoticasFecha, UserResponse, User } from '../../interfaces/interfaces';
+import { MedioResponse, NoticiaResponse, RespuestaTopHeadLines, Medio, NoticasFecha, UserResponse, User, Noticia } from '../../interfaces/interfaces';
 import { environment } from '../../../environments/environment';
 
 import { Observable, timer } from 'rxjs';
@@ -85,17 +85,15 @@ export class NoticiasService {
      
   }
 
-  async recargar(){
-    await this.ejecutarQuery<NoticiaResponse>(`/noticias?consultar=true&usuario=${this.datal.usuario.usuario_id}&pag=${this.pages}`).
-    subscribe(resp=>{
-      console.log(resp)
-    }) 
-  
+   recargar(){
+    return this.ejecutarQuery<NoticiaResponse>(`/noticias?consultar=true&usuario=${this.datal.usuario.usuario_id}&pag=${this.pages}`);
   }
 
   getMedios(){
     this.pages++;
-    // return this.http.get<RespuestaTopHeadLines>(`https://newsapi.org/v2/top-headlines?country=us&apiKey=7490eb6283774faea78acce44f96e423`);
+    this.http.get<MedioResponse>(`medio/update?usuario=${this.datal.usuario.usuario_id}`).subscribe(()=>{
+      
+    });
     return this.ejecutarQuery<MedioResponse>(`/medio/medios?usuario=${this.datal.usuario.usuario_id}`);
   }
 
@@ -137,11 +135,11 @@ export class NoticiasService {
 
   getNoticiasFecha(fechaIn,fechaF,medio?,tipo?){
     let params = new HttpParams()
-    .set('inicio', fechaIn).
-    set('fin',fechaF).
-    set('medio',medio).
+    // .set('inicio', fechaIn).
+    // set('fin',fechaF).
+    .set('medio',medio).
     set('tipo',tipo);
-    return this.ejecutarQuery<NoticasFecha>(`/noticias/reporte`,params);
+    return this.ejecutarQuery<NoticasFecha>(`/noticias/reporte?inicio=${fechaIn}&fin=${fechaF}`,params);
   }
 
 
@@ -149,6 +147,17 @@ export class NoticiasService {
      return this.ejecutarQuery<MedioResponse>(`/medio/eliminar?usuario=${this.datal.usuario.usuario_id}&medio=${medio}`);
   }
 
+
+  guardarFavorito(noticia:Noticia){
+    console.log(noticia)
+    return this.ejecutarQuery<NoticiaResponse>(`/noticias/favoritos/guardar?usuario=${this.datal.usuario.usuario_id}&noticia=${noticia.id}`);
+  }
+  eliminarFavorito(noticia:Noticia){
+    return this.ejecutarQuery<NoticiaResponse>(`/noticias/favoritos/eliminar?usuario=${this.datal.usuario.usuario_id}&noticia=${noticia.id}`);
+  }
+  getFavorito(){
+    return this.ejecutarQuery<NoticiaResponse>(`/noticias/favoritos?usuario=${this.datal.usuario.usuario_id}`);
+  }
 //?LOS METODOS PARA LOGIN Y REGISTRO
   login(nick,passsword){
     let params = {

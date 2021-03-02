@@ -11,6 +11,7 @@ import { NoticiasService } from 'src/app/services/noticia/noticias.service';
 })
 export class RegistrationPage implements OnInit {
 
+  presentar:boolean=false;
   constructor(private router:Router,private noticiasService:NoticiasService,
     private toastController: ToastController) { }
 
@@ -27,6 +28,7 @@ export class RegistrationPage implements OnInit {
         return
       }
 
+      this.presentar=true;
       let user ={
         nombre:forma.value.nombre,
         apellido:forma.value.apellido,
@@ -36,6 +38,7 @@ export class RegistrationPage implements OnInit {
       }
       console.log(user);
       this.noticiasService.register(user).subscribe(resp=>{
+        this.presentar=false;
         if (resp.status==="400") {
           this.presentToast(resp.message);
           return;

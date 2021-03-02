@@ -11,7 +11,7 @@
     </ion-card-subtitle>
 
     <ion-card-title style="size: 12px;" (click)="abrirNoticia()">{{ noticia.nombre }}
-      <img [src]="retornarIcon(noticia.porcentaje)" class="iconoPor" />  
+      <!-- <img [src]="retornarIcon(noticia.porcentaje)" class="iconoPor" />   -->
     </ion-card-title>
   
   </ion-card-header>
@@ -20,6 +20,7 @@
   <ion-card-content>
     <p>
       {{toTex(noticia.contenido)}}
+      <img [src]="retornarIcon(noticia.porcentaje)" class="iconoPor" />  
       <!-- {{ noticia.media_url}} -->
     </p>
     <ion-label> <strong>Enlaces :</strong></ion-label>
@@ -29,6 +30,8 @@
         <ion-label color="danger" (click)="abrirEnlaces(item)" >{{item}}</ion-label>
       </ion-chip>
     </p>
-   
+    <ion-icon *ngIf="dataLocaleService.enFavorito(noticia)" color="warning" name="star-sharp" class="iconoF" ></ion-icon>
+    <!-- <ion-icon *ngIf="dataLocaleService.enFavorito(noticia)" [name]="heart-only" slot="end"></ion-icon> -->
+
   </ion-card-content>
 </ion-card>

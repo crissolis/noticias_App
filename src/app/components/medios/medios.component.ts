@@ -24,16 +24,17 @@ export class MediosComponent implements OnInit {
     private toastController: ToastController
   ) { 
    
-       this.noticiasService.getMedios().subscribe(medio=>{
-         medio.resp.forEach(m=>{
-        this.mediosU.push(m);
-          console.log(m)
-         })
-       });
-    
   }
 
   ngOnInit() {
+    this.mediosU=[];
+    this.noticiasService.getMedios().subscribe(medio=>{
+      medio.resp.forEach(m=>{
+     this.mediosU.push(m);
+       console.log(m)
+      })
+    });
+ 
     console.log(this.medios);
   }
 
@@ -65,6 +66,7 @@ export class MediosComponent implements OnInit {
            this.noticiasService.eliminarMedio(medio.medio_id).subscribe(res=>{
              console.log(res)
             this.presentToast("medio Eliminado");
+            this.ngOnInit();
             this.actualizar.emit("actualizar");
             // window.location.reload();  
            });
@@ -83,6 +85,7 @@ export class MediosComponent implements OnInit {
                 medio.activo=true;
                 this.noticiasService.guargarMedio(medio).subscribe(resp=>{
                   this.presentToast("Se agrego el medio");
+                  this.ngOnInit();
                   this.actualizar.emit("actualizar");
                   // window.location.reload();  
                 });
