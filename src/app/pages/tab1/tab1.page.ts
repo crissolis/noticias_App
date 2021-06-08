@@ -29,8 +29,8 @@ export class Tab1Page implements OnInit {
   }
 
   async cargarNoticias(event?){
-    this.noticiasService.recargar().subscribe(()=>{   
     this.noticias=[];
+    this.noticiasService.recargar().subscribe(()=>{   
     this.noticiasService.pages=0;
     console.log(this.noticiasService.pages=0)
     this.noticiasService.getNoticias().subscribe(datos=>{
@@ -64,7 +64,7 @@ export class Tab1Page implements OnInit {
   
 
   cargarNoticiasAnt(event?){
-    console.log(this.noticias)
+    // console.log(this.noticias)
     let id=this.noticias[this.noticias.length - 1].id;
     this.noticiasService.getNoticiasAntiguas(id).subscribe(datos=>{
       // console.log(datos);

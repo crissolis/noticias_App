@@ -33,7 +33,7 @@ export class NoticiasModalComponent implements OnInit {
       if (event) {
        let id=this.noticias[this.noticias.length - 1].id;
         this.noticiasService.getNoticiasMedio(categoria,Number(id)).subscribe(datos=>{
-      
+       
         datos.noticias.forEach(not => {
           let n= this.noticias.find(notic=>notic.id===not.id);
             if (n) {
@@ -57,7 +57,7 @@ export class NoticiasModalComponent implements OnInit {
       
        }else{
         this.noticiasService.getNoticiasMedio(categoria).subscribe(datos=>{
-      
+          console.log(datos)
           datos.noticias.forEach(not => {
             let n= this.noticias.find(notic=>notic.id===not.id);
               if (n) {

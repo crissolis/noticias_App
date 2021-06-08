@@ -74,7 +74,7 @@ export class NoticiasService {
   }
 
 
-
+// este
   getNoticiasAntiguas(ultimoId){
     this.pages++;  
    return   this.ejecutarQuery<NoticiaResponse>(`/noticias?consultar=true&ultimoid=${ultimoId}&usuario=${this.datal.usuario.usuario_id}`).pipe(
@@ -91,8 +91,13 @@ export class NoticiasService {
 
   getMedios(){
     this.pages++;
-    this.http.get<MedioResponse>(`medio/update?usuario=${this.datal.usuario.usuario_id}`).subscribe(()=>{
-      
+    console.log("ey medios")
+    this.ejecutarQuery<MedioResponse>(`/medio/update?usuario=${this.datal.usuario.usuario_id}`).subscribe((resp)=>{
+      console.log(resp);
+      this.ejecutarQuery<MedioResponse>(`/medio/medios?usuario=${this.datal.usuario.usuario_id}`).subscribe(res=>{
+        
+      });
+
     });
     return this.ejecutarQuery<MedioResponse>(`/medio/medios?usuario=${this.datal.usuario.usuario_id}`);
   }
@@ -104,6 +109,7 @@ export class NoticiasService {
   }
 
 
+  // Este
   getNoticiasMedio( medio :number,ultimoId?:number){
     if (this.medioActual===medio) {
       this.categoriaPage++;
@@ -112,6 +118,7 @@ export class NoticiasService {
       this.medioActual=medio;
     }
     if (ultimoId) {
+      console.log("if")
       return   this.ejecutarQuery<NoticiaResponse>(`/noticias?consultar=true&ultimoid=${ultimoId}&medio=${medio}&usuario=${this.datal.usuario.usuario_id}`).pipe(
         flatMap(()=>{
           return this.ejecutarQuery<NoticiaResponse>(`/noticias?consultar=false&pag=${this.categoriaPage}&medio=${medio}&usuario=${this.datal.usuario.usuario_id}`);
@@ -119,6 +126,7 @@ export class NoticiasService {
       );
       
     } else {
+      // console.log("else")
     return this.ejecutarQuery<NoticiaResponse>(`/noticias?consultar=false&pag=${this.categoriaPage}&medio=${medio}&usuario=${this.datal.usuario.usuario_id}`);
       
     }
@@ -127,7 +135,7 @@ export class NoticiasService {
 
 
   guargarMedio(medio:Medio){
-     
+     console.log(medio); 
      return this.ejecutarQuery<Medio>(`/medio/guardar?usuario=${this.datal.usuario.usuario_id}`,medio);
   }
 
@@ -139,6 +147,7 @@ export class NoticiasService {
     // set('fin',fechaF).
     .set('medio',medio).
     set('tipo',tipo);
+    console.log(tipo);
     return this.ejecutarQuery<NoticasFecha>(`/noticias/reporte?inicio=${fechaIn}&fin=${fechaF}`,params);
   }
 

@@ -10,6 +10,13 @@
 <ion-content>
   <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar( f )" >
     <div style="padding-top: 100px;">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col style="text-align: center;" class="ion-justify-content-center">
+        <ion-icon name="person-circle-outline"  style="font-size: 170px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     <ion-item class="inp" class="inp" lines="full">
       <ion-label position="floating">Nick</ion-label>
       <ion-input  [(ngModel)]="nick" name="nick"  type="text"  required></ion-input>

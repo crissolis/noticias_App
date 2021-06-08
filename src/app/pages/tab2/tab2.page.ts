@@ -48,8 +48,7 @@ export class Tab2Page implements OnInit {
 
     });
     
-    // this.i.setHours(0,0,0);
-    //  this.f.setDate(this.f.getDate()+1);
+    console.log(this.i.getMonth(),this.f.getMonth())
    
   }
 
@@ -68,10 +67,10 @@ export class Tab2Page implements OnInit {
       this.categoria=categoria;
       this.tipo=tipo;
     let  fi=this.tiempo(this.i);
-          fi=`${fi} 00:00`;
+          fi=`${fi} 00:00:00`;
         
     let  ff=this.tiempo(this.f);
-          ff=`${ff} 23:59`;
+          ff=`${ff} 23:59:59`;
     console.log(fi,ff)
       //  let id=this.noticias[this.noticias.length - 1].id;
       
@@ -119,13 +118,13 @@ export class Tab2Page implements OnInit {
 
 
   tiempo(fecha: Date) {
-    // let day = fecha.getDate()
-    // let month = fecha.getMonth() +1
-    // let year = fecha.getFullYear()
+    let day = fecha.getDate()
+    let month = fecha.getMonth() +1
+    let year = fecha.getFullYear()
 
-    let day = fecha.getUTCDay()
-    let month = fecha.getUTCDate() +1
-    let year = fecha.getUTCFullYear()
+    // let day = fecha.getUTCDay()
+    // let month = fecha.getDate()
+    // let year = fecha.getUTCFullYear()
 
     let  hora=fecha.getHours();
     let  min=fecha.getMinutes();

@@ -22,7 +22,7 @@ export class NoticiaComponent implements OnInit {
   constructor(private iab: InAppBrowser,
     private actionSheetController: ActionSheetController,
     private socialSharing: SocialSharing,
-    private dataLocaleService:DataLocalService,
+    public dataLocaleService:DataLocalService,
     private toastController: ToastController,
     private platform: Platform,
     private noticiaService: NoticiasService,
@@ -131,14 +131,13 @@ export class NoticiaComponent implements OnInit {
   }
 
   compartirNoticia(){
-
     if (this.platform.is("cordova")) {
       this.socialSharing.share(this.noticia.nombre,
         this.noticia.contenido,'',this.noticia.noticia_url);
     }else{
       if (navigator['share']) {
         navigator['share']({
-          title: this.noticia.nombre,
+          title: this.noticia.medio_name,
           text: this.noticia.contenido,
           url: this.noticia.noticia_url,
         })
@@ -152,6 +151,7 @@ export class NoticiaComponent implements OnInit {
   }
 
    toTex(texto):string { 
+     console.log(texto);
     const regex = /https:/gi;
     let l=  texto.search(regex);
     if (l!=undefined) {
@@ -165,13 +165,19 @@ export class NoticiaComponent implements OnInit {
 toUrl(texto):string[] { 
   const regex = /https:/gi;
   var arrayDeCadenas=[];
+  var Enlaces=[];
   let l=  texto.search(regex);
   if (l!=undefined) {
     let txf =texto.slice(l);
    arrayDeCadenas = txf.split(" ");
-    return arrayDeCadenas;
   }
-  return arrayDeCadenas;
+
+  arrayDeCadenas.forEach((element:String) => {
+    if (element.includes('https') && !element.includes('...')) {
+      Enlaces.push(element);
+    }
+  });
+  return Enlaces;
 } 
 
 

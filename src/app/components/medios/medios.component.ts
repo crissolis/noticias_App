@@ -81,7 +81,7 @@ export class MediosComponent implements OnInit {
                 icon: 'heart',
                 cssClass:' action-dark', 
                 handler: () => {
-                  console.log('Favorite clicked');
+                console.log('Favorite clicked');
                 medio.activo=true;
                 this.noticiasService.guargarMedio(medio).subscribe(resp=>{
                   this.presentToast("Se agrego el medio");

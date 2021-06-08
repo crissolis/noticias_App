@@ -13,7 +13,7 @@
 
   <ion-item>
     <ion-label>Medio</ion-label>
-    <ion-select #m (ionChange)="Cargar()"   [(ngModel)]="medio" name="medio" [compareWith]="compareWith">
+    <ion-select (ionChange)="Cargar()"   [(ngModel)]="medio" name="medio">
       <ion-select-option  *ngFor="let medio of medios" [value]="medio.medio_id">{{medio.medio_name}}</ion-select-option>
     </ion-select>
   </ion-item>
@@ -21,23 +21,27 @@
 
   <ion-item>
     <ion-label>Fecha Inicio</ion-label>
-    <ion-datetime (ionChange)="Cargar()"  [(ngModel)]="fechaI" name="fechaI" displayFormat="YYYY-MMM-DD H:mm" min="2020" [max]="hoy"
+    <ion-datetime (ionChange)="Cargar()"  [(ngModel)]="fechaI" name="fechaI" displayFormat="YYYY-MM-DD H:mm" min="2020" [max]="hoy"
       [dayShortNames]="customDayShortNames"
       monthShortNames="ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov, dic"></ion-datetime>
   </ion-item>
 
   <ion-item>
     <ion-label>Fecha Fin</ion-label>
-    <ion-datetime (ionChange)="Cargar()"  [(ngModel)]="fechaF" name="fechaF" displayFormat="YYYY-MMM-DD H:mm" min="2020" [max]="hoy"
+    <ion-datetime (ionChange)="Cargar()"  [(ngModel)]="fechaF" name="fechaF" displayFormat="YYYY-MM-DD H:mm" min="2020" [max]="hoy"
       [dayShortNames]="customDayShortNames"
       monthShortNames="ene, feb, mar, abr, may, jun, jul, ago, sep, oct, nov, dic"></ion-datetime>
   </ion-item>
 
- <div *ngFor="let grafico of graficos" style="display: block">
-                <app-grafico-dona 
-                [doughnutChartLabels]="grafico.labels"
-                [doughnutChartData]="grafico.data"
-                doughnutChartType="doughnut"
-                 ></app-grafico-dona>     
-    </div>
+  
+  <div  *ngIf="noticias.length>0">
+    <div *ngFor="let grafico of graficos" style="display: block">
+      <app-grafico-dona 
+      [doughnutChartLabels]="grafico.labels"
+      [doughnutChartData]="grafico.data"
+      doughnutChartType="doughnut"
+       ></app-grafico-dona>     
+</div>
+  </div>
+ 
   </ion-content>

@@ -25,12 +25,13 @@
     </p>
     <ion-label> <strong>Enlaces :</strong></ion-label>
     <p  *ngFor="let item of toUrl(noticia.contenido)">
-      <ion-chip>
+      <ion-chip  *ngIf="item.length>5">
         <ion-icon name="pin" color="primary"></ion-icon>
         <ion-label color="danger" (click)="abrirEnlaces(item)" >{{item}}</ion-label>
       </ion-chip>
     </p>
-    <ion-icon *ngIf="dataLocaleService.enFavorito(noticia)" color="warning" name="star-sharp" class="iconoF" ></ion-icon>
+    <ion-icon *ngIf="dataLocaleService.enFavorito(noticia)"  style="font-size:xx-large;" 
+     color="warning" name="star-sharp" class="iconoF" ></ion-icon>
     <!-- <ion-icon *ngIf="dataLocaleService.enFavorito(noticia)" [name]="heart-only" slot="end"></ion-icon> -->
 
   </ion-card-content>

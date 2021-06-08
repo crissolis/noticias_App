@@ -13,6 +13,7 @@ import Swal from 'sweetalert2'
 })
 export class LoginPage implements OnInit {
 
+  nick:string="";
   constructor(private router:Router,private noticiasService:NoticiasService,
     private datalocal:DataLocalService, private toastController: ToastController) {
       

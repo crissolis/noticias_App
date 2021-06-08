@@ -11,6 +11,14 @@ import { NoticiasService } from 'src/app/services/noticia/noticias.service';
 })
 export class RegistrationPage implements OnInit {
 
+  user ={
+    nombre:"",
+    apellido:"",
+    nick:"",
+    correo:"",
+    password:"",
+  }
+  y
   presentar:boolean=false;
   constructor(private router:Router,private noticiasService:NoticiasService,
     private toastController: ToastController) { }
@@ -29,15 +37,10 @@ export class RegistrationPage implements OnInit {
       }
 
       this.presentar=true;
-      let user ={
-        nombre:forma.value.nombre,
-        apellido:forma.value.apellido,
-        nick:forma.value.nick,
-        correo:forma.value.correo,
-        password:forma.value.password,
-      }
-      console.log(user);
-      this.noticiasService.register(user).subscribe(resp=>{
+      
+
+      console.log(this.user);
+      this.noticiasService.register(this.user).subscribe(resp=>{
         this.presentar=false;
         if (resp.status==="400") {
           this.presentToast(resp.message);

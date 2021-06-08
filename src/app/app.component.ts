@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { DataLocalService } from './services/dataLocal/data-local.service';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,8 @@ import { DataLocalService } from './services/dataLocal/data-local.service';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+
+  showSplash=true;
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
@@ -23,8 +26,10 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
-      this.changeDarkMode();
+      // this.splashScreen.hide();
+      // this.changeDarkMode();
+      this.splashScreen.hide(); 
+      timer(2000).subscribe(()=>this.showSplash=false);
     });
   }
 

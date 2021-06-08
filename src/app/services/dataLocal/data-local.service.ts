@@ -49,7 +49,13 @@ export class DataLocalService {
 }
 
 async getUsuario(){ 
-  this.usuario=JSON.parse(await this.storage.get('usuario'));
+
+  this.usuario=await this.storage.get('usuario');
+  if (this.usuario) {
+  console.log(this.usuario)
+    this.usuario= JSON.parse(await this.storage.get('usuario'));
+  }
+
   console.log(this.usuario)
 }
 
