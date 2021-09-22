@@ -84,9 +84,9 @@ export class NoticiasModalReportComponent implements OnInit {
     var fi=`${this.tiempo(this.fechaI)}:00`;
      var ff=`${this.tiempo(this.fechaF)}:59` ;
 
-     console.log(fi,ff)
+    //  console.log(fi,ff)
     this.noticiasService.getNoticiasFecha(fi,ff,this.medio,undefined).subscribe(datos=>{
-      console.log(datos)
+      // console.log(datos)
       this.noticias=datos.noticias;
       this.clasificar(this.noticias);
       this.graficos=[{
@@ -122,7 +122,7 @@ export class NoticiasModalReportComponent implements OnInit {
 
 
   tiempo(fecha: Date) {
-    console.log(fecha)
+    // console.log(fecha)
     fecha=new Date(fecha);
     let day = fecha.getDate();
     let month = fecha.getMonth() +1;

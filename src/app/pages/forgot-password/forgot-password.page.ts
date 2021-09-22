@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './forgot-password.page.html',
   styleUrls: ['./forgot-password.page.scss'],
 })
+/**
+ *@ignore
+ */
 export class ForgotPasswordPage implements OnInit {
 
   constructor() { }

@@ -32,9 +32,9 @@ export class Tab1Page implements OnInit {
     this.noticias=[];
     this.noticiasService.recargar().subscribe(()=>{   
     this.noticiasService.pages=0;
-    console.log(this.noticiasService.pages=0)
+    // console.log(this.noticiasService.pages=0)
     this.noticiasService.getNoticias().subscribe(datos=>{
-       console.log(datos);
+      //  console.log(datos);
    
       if (datos.noticias.length===0) {
         event.target.disabled=true;
@@ -118,7 +118,7 @@ export class Tab1Page implements OnInit {
             text: 'cancelar',
             role: 'cancel',
             handler: () => {
-              console.log('Cancel clicked');
+              // console.log('Cancel clicked');
             }
           }
         ]

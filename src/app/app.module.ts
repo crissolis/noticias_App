@@ -23,6 +23,9 @@ import { TabsPageRoutingModule } from './pages/tabs/tabs-routing.module';
 
 
 registerLocaleData(localeEsEc, 'es-Ec');
+/**
+ * Modulo principal de la App
+ */
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

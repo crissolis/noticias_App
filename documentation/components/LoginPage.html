@@ -1,0 +1,763 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>noticias_app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">noticias_app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>LoginPage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/login/login.page.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-login</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./login.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./login.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#nick">nick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ingresar">ingresar</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#presentToast">presentToast</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, noticiasService: <a href="../injectables/NoticiasService.html">NoticiasService</a>, datalocal: <a href="../injectables/DataLocalService.html">DataLocalService</a>, toastController: ToastController)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/login/login.page.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>noticiasService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NoticiasService.html" target="_self" >NoticiasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>datalocal</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataLocalService.html" target="_self" >DataLocalService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>toastController</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ingresar"></a>
+                    <span class="name">
+                        <b>
+                            ingresar
+                        </b>
+                        <a href="#ingresar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ingresar(forma: <a href="https://angular.io/api/forms/NgForm" target="_blank">NgForm</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/pages/login/login.page.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>forma</td>
+                                    <td>
+                                                <code><a href="https://angular.io/api/forms/NgForm" target="_blank" >NgForm</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="28"
+                            class="link-to-prism">src/app/pages/login/login.page.ts:28</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="presentToast"></a>
+                    <span class="name">
+                        <b>
+                            presentToast
+                        </b>
+                        <a href="#presentToast"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>presentToast(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, usuario: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="64"
+                            class="link-to-prism">src/app/pages/login/login.page.ts:64</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>usuario</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nick"></a>
+                        <span class="name">
+                            <b>
+                            nick</b>
+                            <a href="#nick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&quot;&quot;</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/login/login.page.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { NgForm } from &#x27;@angular/forms&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { NoticiasService } from &#x27;../../services/noticia/noticias.service&#x27;;
+import { DataLocalService } from &#x27;../../services/dataLocal/data-local.service&#x27;;
+import { ToastController } from &#x27;@ionic/angular&#x27;;
+import Swal from &#x27;sweetalert2&#x27;
+
+@Component({
+  selector: &#x27;app-login&#x27;,
+  templateUrl: &#x27;./login.page.html&#x27;,
+  styleUrls: [&#x27;./login.page.scss&#x27;],
+})
+export class LoginPage implements OnInit {
+
+  nick:string&#x3D;&quot;&quot;;
+  constructor(private router:Router,private noticiasService:NoticiasService,
+    private datalocal:DataLocalService, private toastController: ToastController) {
+      
+     
+      // console.log(this.datalocal.estaLogeado())
+      // if ( this.datalocal.estaLogeado()) {
+      //   this.router.navigate([&#x27;/login/tabs/tab1&#x27;]);
+      //   console.log(&quot;wwww&quot;) 
+      // }
+     }
+
+  ngOnInit() {
+
+  }
+
+
+  
+  ingresar(forma:NgForm){
+    console.log(forma)
+    if (forma.invalid) {
+      return;
+    }
+
+    // let user &#x3D;{
+    //   usuario:forma.value.nick,
+    //   clave:forma.value.password
+    // }
+    this.noticiasService.login(forma.value.nick,forma.value.password).subscribe(res&#x3D;&gt;{
+      console.log(res);
+      if (res.status&#x3D;&#x3D;&#x3D;&quot;400&quot;) {
+        this.presentToast(res.message,null);
+      }else{
+        this.presentToast(null,res.user[0].nombre);
+       this.datalocal.guardarUsuario(res.user[0]);
+       this.router.navigate([&#x27;/tab1&#x27;]);
+      }
+    });
+
+    // let usuario&#x3D;new Usuario(null,forma.value.email,forma.value.password);
+    // this.usuarioS.login(usuario,this.recuerdame).subscribe(res&#x3D;&gt;{
+    //   console.log(res);
+      // this.router.navigate([&#x27;login/tabs/tab1&#x27;]);
+    // });
+  }
+
+
+  
+   presentToast(message:string,usuario:string) {
+    // const toast &#x3D; await this.toastController.create({
+    //   message,
+    //   position:&#x27;bottom&#x27;,
+    //   duration: 2000
+    // });
+    // toast.present();
+  
+    if (usuario) {
+      Swal.fire({
+       title: &#x27;Ingreso existoso&#x27;,
+        text:&#x27;bienvenido &#x27;+usuario,
+       icon: &#x27;success&#x27;,
+       backdrop:false,
+      }
+        
+      ) 
+    }else{
+      Swal.fire({
+        title: &#x27;Error&#x27;,
+         text:message,
+        icon: &#x27;error&#x27;,
+        backdrop:false,  
+
+       }
+         
+       )
+    }
+   
+  }
+
+  
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
+  &lt;ion-toolbar&gt;
+    &lt;ion-buttons slot&#x3D;&quot;start&quot;&gt;
+      &lt;ion-back-button defaultHref&#x3D;&quot;home&quot;&gt;&lt;/ion-back-button&gt;
+    &lt;/ion-buttons&gt;
+    &lt;ion-title&gt;Log In&lt;/ion-title&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content&gt;
+  &lt;form ngNativeValidate #f&#x3D;&quot;ngForm&quot; (ngSubmit)&#x3D;&quot;ingresar( f )&quot; &gt;
+    &lt;div style&#x3D;&quot;padding-top: 100px;&quot;&gt;
+      &lt;ion-grid fixed&gt;
+        &lt;ion-row&gt;
+          &lt;ion-col style&#x3D;&quot;text-align: center;&quot; class&#x3D;&quot;ion-justify-content-center&quot;&gt;
+        &lt;ion-icon name&#x3D;&quot;person-circle-outline&quot;  style&#x3D;&quot;font-size: 170px;&quot;&gt;&lt;/ion-icon&gt;
+          &lt;/ion-col&gt;
+        &lt;/ion-row&gt;
+      &lt;/ion-grid&gt;
+    &lt;ion-item class&#x3D;&quot;inp&quot; class&#x3D;&quot;inp&quot; lines&#x3D;&quot;full&quot;&gt;
+      &lt;ion-label position&#x3D;&quot;floating&quot;&gt;Nick&lt;/ion-label&gt;
+      &lt;ion-input  [(ngModel)]&#x3D;&quot;nick&quot; name&#x3D;&quot;nick&quot;  type&#x3D;&quot;text&quot;  required&gt;&lt;/ion-input&gt;
+    &lt;/ion-item&gt;
+
+    &lt;ion-item  class&#x3D;&quot;inp&quot; class&#x3D;&quot;inp&quot; lines&#x3D;&quot;full&quot;&gt;
+      &lt;ion-label position&#x3D;&quot;floating&quot;&gt;Password&lt;/ion-label&gt;
+      &lt;ion-input ngModel name&#x3D;&quot;password&quot;  type&#x3D;&quot;password&quot;  required&gt;&lt;/ion-input&gt;
+    &lt;/ion-item&gt;
+
+    &lt;ion-row&gt;
+      &lt;ion-col style&#x3D;&quot;text-align: center;&quot;&gt;
+        &lt;ion-button style&#x3D;&quot;border-radius: 30px;margin-top:40px;&quot; type&#x3D;&quot;submit&quot; color&#x3D;&quot;dark&quot;  &gt;Iniciar sesión&lt;/ion-button&gt;
+      &lt;/ion-col&gt;
+    &lt;/ion-row&gt;
+    &lt;!-- &lt;ion-row&gt;
+        &lt;ion-col class&#x3D;&quot;ion-text-center&quot; size&#x3D;&quot;12&quot;&gt;
+          &lt;a  [routerLink]&#x3D;&quot;[&#x27;/forgot-password&#x27;]&quot; class&#x3D;&quot;small-text&quot;&gt;Forgot Password?&lt;/a&gt;
+        &lt;/ion-col&gt;
+    &lt;/ion-row&gt; --&gt;
+  &lt;/div&gt;
+  &lt;/form&gt;
+
+
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./login.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">$info-shadow: 0 2px 2px 0 rgba(66,165,245,.14), 0 3px 1px -2px rgba(66,165,245,.2), 0 1px 5px 0 rgba(66,165,245,.12);
+$info-shadow-hover:0 14px 26px -12px rgba(23,105,255,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(23,105,255,.2);
+
+$warning-shadow:0 2px 2px 0 rgba(248,194,0,.14), 0 3px 1px -2px rgba(248,194,0,.2), 0 1px 5px 0 rgba(248,194,0,.12);
+$warning-shadow-hover:0 14px 26px -12px rgba(248,194,0,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(248,194,0,.2);
+
+$danger-shadow:0 2px 2px 0 rgba(239,83,80,.14), 0 3px 1px -2px rgba(239,83,80,.2), 0 1px 5px 0 rgba(239,83,80,.12);
+$danger-shadow-hover:0 14px 26px -12px rgba(239,83,80,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(239,83,80,.2);
+
+$success-shadow:0 2px 2px 0 rgba(40,190,189,.14), 0 3px 1px -2px rgba(40,190,189,.2), 0 1px 5px 0 rgba(40,190,189,.12);
+$success-shadow-hover:0 14px 26px -12px rgba(40,190,189,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(40,190,189,.2);
+    
+$primary-shadow:0 2px 2px 0 rgba(116,96,238,.14), 0 3px 1px -2px rgba(116,96,238,.2), 0 1px 5px 0 rgba(116,96,238,.12);
+$primary-shadow-hover:0 14px 26px -12px rgba(116,96,238,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(116,96,238,.2);
+
+$default-shadow:0 2px 2px 0 rgba(169,169,169,.14), 0 3px 1px -2px rgba(169,169,169,.2), 0 1px 5px 0 rgba(169,169,169,.12);
+$default-shadow-hover:0 14px 26px -12px rgba(169,169,169,.42), 0 4px 23px 0 rgba(0,0,0,.12), 0 8px 10px -5px rgba(169,169,169,.2);
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-toolbar>    <ion-buttons slot="start">      <ion-back-button defaultHref="home"></ion-back-button>    </ion-buttons>    <ion-title>Log In</ion-title>  </ion-toolbar></ion-header><ion-content>  <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar( f )" >    <div style="padding-top: 100px;">      <ion-grid fixed>        <ion-row>          <ion-col style="text-align: center;" class="ion-justify-content-center">        <ion-icon name="person-circle-outline"  style="font-size: 170px;"></ion-icon>          </ion-col>        </ion-row>      </ion-grid>    <ion-item class="inp" class="inp" lines="full">      <ion-label position="floating">Nick</ion-label>      <ion-input  [(ngModel)]="nick" name="nick"  type="text"  required></ion-input>    </ion-item>    <ion-item  class="inp" class="inp" lines="full">      <ion-label position="floating">Password</ion-label>      <ion-input ngModel name="password"  type="password"  required></ion-input>    </ion-item>    <ion-row>      <ion-col style="text-align: center;">        <ion-button style="border-radius: 30px;margin-top:40px;" type="submit" color="dark"  >Iniciar sesión</ion-button>      </ion-col>    </ion-row>    <!-- <ion-row>        <ion-col class="ion-text-center" size="12">          <a  [routerLink]="[\'/forgot-password\']" class="small-text">Forgot Password?</a>        </ion-col>    </ion-row> -->  </div>  </form></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ForgotPasswordPage', 'selector': 'app-forgot-password'},{'name': 'GraficoDonaComponent', 'selector': 'app-grafico-dona'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'MediosComponent', 'selector': 'app-medios'},{'name': 'NoticiaComponent', 'selector': 'app-noticia'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasModalComponent', 'selector': 'app-noticias-modal'},{'name': 'NoticiasModalReportComponent', 'selector': 'app-noticias-modal-report'},{'name': 'RegistrationPage', 'selector': 'app-registration'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'Tab4Page', 'selector': 'app-tab4'},{'name': 'TabsPage', 'selector': 'app-tabs'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LoginPage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'LoginPage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

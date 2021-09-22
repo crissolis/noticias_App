@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Medio } from '../../interfaces/interfaces';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { ActionSheetController, ToastController } from '@ionic/angular';
+import { ActionSheetController, Platform, ToastController } from '@ionic/angular';
 import { NoticiasService } from 'src/app/services/noticia/noticias.service';
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-medios',
@@ -21,7 +22,9 @@ export class MediosComponent implements OnInit {
     private iab: InAppBrowser,
     private noticiasService:NoticiasService,
     private actionSheetController: ActionSheetController,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private socialSharing: SocialSharing,
+    private platform: Platform,
   ) { 
    
   }
@@ -31,11 +34,11 @@ export class MediosComponent implements OnInit {
     this.noticiasService.getMedios().subscribe(medio=>{
       medio.resp.forEach(m=>{
      this.mediosU.push(m);
-       console.log(m)
+      //  console.log(m)
       })
     });
  
-    console.log(this.medios);
+    // console.log(this.medios);
   }
 
   
@@ -48,8 +51,8 @@ export class MediosComponent implements OnInit {
     let guardarBorrarBtn;
     let medioEn:Medio;
 
-    console.log(this.mediosU)
-    console.log(this.medios)
+    // console.log(this.mediosU)
+    // console.log(this.medios)
 
   medioEn=this.mediosU.find(m=>m.medio_id===medio.medio_id);
 
@@ -61,10 +64,10 @@ export class MediosComponent implements OnInit {
           icon: 'trash',
           cssClass:' action-dark', 
           handler: () => {
-            console.log('Borrar');
+            // console.log('Borrar');
             medio.activo=false;
            this.noticiasService.eliminarMedio(medio.medio_id).subscribe(res=>{
-             console.log(res)
+            //  console.log(res)
             this.presentToast("medio Eliminado");
             this.ngOnInit();
             this.actualizar.emit("actualizar");
@@ -81,7 +84,7 @@ export class MediosComponent implements OnInit {
                 icon: 'heart',
                 cssClass:' action-dark', 
                 handler: () => {
-                console.log('Favorite clicked');
+                // console.log('Favorite clicked');
                 medio.activo=true;
                 this.noticiasService.guargarMedio(medio).subscribe(resp=>{
                   this.presentToast("Se agrego el medio");
@@ -103,18 +106,12 @@ export class MediosComponent implements OnInit {
           icon: 'share',
           cssClass:' action-dark',
           handler: () => {
-            console.log('Share clicked');
+            this.compartirMedio(medioEn);
+            // console.log('Share clicked');
             // this.compartirNoticia();
           }
          }, 
           guardarBorrarBtn
-        //   text: 'Favorito',
-        //   icon: 'heart',
-        //   cssClass:' action-dark', 
-        //   handler: () => {
-        //     console.log('Favorite clicked');
-        //    this.dataLocaleService.guardarNoticias(this.noticia);
-        //   }
         
         , {
           text: 'Cancelar',
@@ -130,6 +127,28 @@ export class MediosComponent implements OnInit {
     }
   
 
+
+
+    compartirMedio(medio:Medio){
+      if (this.platform.is("cordova")) {
+        this.socialSharing.share(medio.nombre,
+          medio.description,'',medio.url);
+      }else{
+        if (navigator['share']) {
+          navigator['share']({
+            title: medio.nombre,
+            text: medio.description,
+            url: medio.url,
+          })
+            .then(() => console.log('Successful share'))
+            .catch((error) => console.log('Error sharing', error));
+        }else{
+          // console.log("nell");
+        }
+      }
+    
+    }
+
     async presentToast(message:string) {
       const toast = await this.toastController.create({
         message,
@@ -137,4 +156,5 @@ export class MediosComponent implements OnInit {
       });
       toast.present();
     }
+
 }

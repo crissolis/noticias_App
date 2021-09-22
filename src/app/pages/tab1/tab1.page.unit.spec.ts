@@ -63,7 +63,7 @@ describe('Pruebas unitarias: Noticias generales', () => {
         });
 
                 
-        console.log(componente.noticias)
+        // console.log(componente.noticias)
         componente.cargarNoticiasAnt();
 
         expect( componente.noticias.length ).toBeGreaterThan(1);

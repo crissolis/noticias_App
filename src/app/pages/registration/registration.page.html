@@ -37,14 +37,16 @@
 
     <ion-item class="inp" lines="full">
       <ion-label position="floating">Correo</ion-label>
-      <ion-input  [(ngModel)]="user.correo" name="correo"  type="email"  required></ion-input>
+      <ion-input  [(ngModel)]="user.correo" name="correo" type="email"  required></ion-input>
     </ion-item>
 
     <ion-item class="inp"  lines="full">
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input  [(ngModel)]="user.password" name="password"  type="password"  required></ion-input>
+      <ion-label  position="floating">Contraseña</ion-label>
+      <ion-input  [(ngModel)]="user.password" name="password" #c  (keyup)="validarPass(c)" type="password"  required></ion-input>
     </ion-item>
-
+    <div class="tooltip">
+      <span *ngIf="valida" >La contraseña debe tener al entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos un caracter no alfanumérico</span>
+    </div>
     <ion-item class="inp"  lines="full">
       <ion-label position="floating">Repetir Contraseña</ion-label>
       <ion-input ngModel name="password1"  type="password"  required></ion-input>

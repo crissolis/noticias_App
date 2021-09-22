@@ -67,7 +67,7 @@ export interface Medio {
 
 
 export interface NoticasFecha {
-  mesagge: string;
+  message: string;
   status: string;
   cantidad: number;
   noticias: Noticia[];
@@ -81,8 +81,8 @@ export interface UserResponse {
 }
 
 export interface User {
-  usuario_id: number;
-  activo: boolean;
+  usuario_id?: number;
+  activo?: boolean;
   apellido: string;
   correo: string;
   nick: string;

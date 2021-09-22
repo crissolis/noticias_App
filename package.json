@@ -1,5 +1,5 @@
 {
-  "name": "Noticias_app",
+  "name": "noticias_app",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "npx compodoc -p tsconfig.doc.json"
   },
   "private": true,
   "dependencies": {

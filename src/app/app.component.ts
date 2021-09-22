@@ -6,6 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { DataLocalService } from './services/dataLocal/data-local.service';
 import { timer } from 'rxjs';
 
+/**
+ * Componente principal de la app
+ */
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -23,6 +26,9 @@ export class AppComponent {
     this.initializeApp();
   }
 
+  /**
+   * Aqui se inicia la app y se carga el Splash personalizado
+   */
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();

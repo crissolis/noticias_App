@@ -1,0 +1,1909 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>noticias_app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">noticias_app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>NoticiasService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/services/noticia/noticias.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#categoriaPage">categoriaPage</a>
+                            </li>
+                            <li>
+                                <a href="#medioActual">medioActual</a>
+                            </li>
+                            <li>
+                                <a href="#pages">pages</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ejecutarQuery">ejecutarQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#ejecutarQueryP">ejecutarQueryP</a>
+                            </li>
+                            <li>
+                                <a href="#eliminarFavorito">eliminarFavorito</a>
+                            </li>
+                            <li>
+                                <a href="#eliminarMedio">eliminarMedio</a>
+                            </li>
+                            <li>
+                                <a href="#getFavorito">getFavorito</a>
+                            </li>
+                            <li>
+                                <a href="#getMedios">getMedios</a>
+                            </li>
+                            <li>
+                                <a href="#getNoticias">getNoticias</a>
+                            </li>
+                            <li>
+                                <a href="#getNoticiasAntiguas">getNoticiasAntiguas</a>
+                            </li>
+                            <li>
+                                <a href="#getNoticiasFecha">getNoticiasFecha</a>
+                            </li>
+                            <li>
+                                <a href="#getNoticiasMedio">getNoticiasMedio</a>
+                            </li>
+                            <li>
+                                <a href="#getSearchMedio">getSearchMedio</a>
+                            </li>
+                            <li>
+                                <a href="#guardarFavorito">guardarFavorito</a>
+                            </li>
+                            <li>
+                                <a href="#guargarMedio">guargarMedio</a>
+                            </li>
+                            <li>
+                                <a href="#login">login</a>
+                            </li>
+                            <li>
+                                <a href="#recargar">recargar</a>
+                            </li>
+                            <li>
+                                <a href="#register">register</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>, datal: <a href="../injectables/DataLocalService.html">DataLocalService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/services/noticia/noticias.service.ts:32</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>http</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>datal</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DataLocalService.html" target="_self" >DataLocalService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ejecutarQuery"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            ejecutarQuery
+                        </b>
+                        <a href="#ejecutarQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ejecutarQuery(query: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, params?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="50"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:50</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de ejecutar las llamadas de tipo GET a la api rest </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>cadena de coneccion </p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>params</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>parametros que se necesiten </p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;T&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ejecutarQueryP"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            ejecutarQueryP
+                        </b>
+                        <a href="#ejecutarQueryP"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ejecutarQueryP(query: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, params?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:61</a></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Type parameters :</b>
+                    <ul class="type-parameters">
+                        <li>T</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de ejecutar las llamadas de tipo POST a la api rest </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>query</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>cadena de coneccion </p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>params</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>parametros que se necesiten </p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;T&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="eliminarFavorito"></a>
+                    <span class="name">
+                        <b>
+                            eliminarFavorito
+                        </b>
+                        <a href="#eliminarFavorito"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>eliminarFavorito(noticia: <a href="../interfaces/Noticia.html">Noticia</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:236</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de eliminar una noticia en favoritos </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>noticia</td>
+                                    <td>
+                                                <code><a href="../interfaces/Noticia.html" target="_self" >Noticia</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>un objeto de tipo Noticia </p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;NoticiaResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="eliminarMedio"></a>
+                    <span class="name">
+                        <b>
+                            eliminarMedio
+                        </b>
+                        <a href="#eliminarMedio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>eliminarMedio(medio: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="217"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:217</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcionencargada de eliminar un medio de la lista de medios de un usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>medio</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id del medio</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;MedioResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getFavorito"></a>
+                    <span class="name">
+                        <b>
+                            getFavorito
+                        </b>
+                        <a href="#getFavorito"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFavorito()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="244"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:244</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de traer todas las noticias que un usuario tenga agregada en favoritos</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;NoticiaResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getMedios"></a>
+                    <span class="name">
+                        <b>
+                            getMedios
+                        </b>
+                        <a href="#getMedios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getMedios()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de traer los medios de un usuario y actualizarlos</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;MedioResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNoticias"></a>
+                    <span class="name">
+                        <b>
+                            getNoticias
+                        </b>
+                        <a href="#getNoticias"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNoticias()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:79</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion que trae las noticias de la pagina principal</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;NoticiaResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNoticiasAntiguas"></a>
+                    <span class="name">
+                        <b>
+                            getNoticiasAntiguas
+                        </b>
+                        <a href="#getNoticiasAntiguas"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNoticiasAntiguas(ultimoId: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:107</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Funcion que trae las noticias mas antiguas segun el ultimo id </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ultimoId</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>ultimo id de noticia traido </p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;NoticiaResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNoticiasFecha"></a>
+                    <span class="name">
+                        <b>
+                            getNoticiasFecha
+                        </b>
+                        <a href="#getNoticiasFecha"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNoticiasFecha(fechaIn, fechaF, medio?, tipo?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="202"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:202</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de traer las noticias de un medio desde un rango de fechas predeterminado </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fechaIn</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>fecha de inicio de la busqueda</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>fechaF</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>fecha final de la busqueda</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>medio</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>id del medio de busqueda</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>tipo</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>tipo de busqueda ASC/DESC</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/NoticasFecha.html" target="_self" >Observable&lt;NoticasFecha&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getNoticiasMedio"></a>
+                    <span class="name">
+                        <b>
+                            getNoticiasMedio
+                        </b>
+                        <a href="#getNoticiasMedio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getNoticiasMedio(medio: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, ultimoId?: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="160"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:160</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de traer las noticias segun el medio especificado y el ultimo id</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>medio</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id del medio</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>ultimoId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                        <p>ultimo id de noticia generado del medio </p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;NoticiaResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getSearchMedio"></a>
+                    <span class="name">
+                        <b>
+                            getSearchMedio
+                        </b>
+                        <a href="#getSearchMedio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getSearchMedio(termino: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="147"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:147</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encaegada de hacer la consulta de busqueda de medios segun el termino enviado</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>termino</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>parametro por el cual se buscara un medio</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;MedioResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="guardarFavorito"></a>
+                    <span class="name">
+                        <b>
+                            guardarFavorito
+                        </b>
+                        <a href="#guardarFavorito"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>guardarFavorito(noticia: <a href="../interfaces/Noticia.html">Noticia</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="226"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:226</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de guardar una noticia en favoritos</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>noticia</td>
+                                    <td>
+                                                <code><a href="../interfaces/Noticia.html" target="_self" >Noticia</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>un objeto de tipo Noticia </p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;NoticiaResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="guargarMedio"></a>
+                    <span class="name">
+                        <b>
+                            guargarMedio
+                        </b>
+                        <a href="#guargarMedio"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>guargarMedio(medio: <a href="../interfaces/Medio.html">Medio</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="188"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:188</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de guardar  un medio</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>medio</td>
+                                    <td>
+                                                <code><a href="../interfaces/Medio.html" target="_self" >Medio</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>un objeto de tipo medio</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/Medio.html" target="_self" >Observable&lt;Medio&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="login"></a>
+                    <span class="name">
+                        <b>
+                            login
+                        </b>
+                        <a href="#login"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>login(nick: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, passsword: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de ejecutar el login de un usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>nick</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>nick del usuario</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>passsword</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>contraseña del usuario</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;UserResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="recargar"></a>
+                    <span class="name">
+                        <b>
+                            recargar
+                        </b>
+                        <a href="#recargar"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>recargar()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="121"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:121</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion que se encarga de volver a cargas las noticas del inicio</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;NoticiaResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="register"></a>
+                    <span class="name">
+                        <b>
+                            register
+                        </b>
+                        <a href="#register"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>register(user: <a href="../interfaces/User.html">User</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="269"
+                            class="link-to-prism">src/app/services/noticia/noticias.service.ts:269</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>funcion encargada de registrar un usuario</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>un objeto de tipo User</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;UserResponse&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categoriaPage"></a>
+                        <span class="name">
+                            <b>
+                            categoriaPage</b>
+                            <a href="#categoriaPage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/services/noticia/noticias.service.ts:32</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="medioActual"></a>
+                        <span class="name">
+                            <b>
+                            medioActual</b>
+                            <a href="#medioActual"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/app/services/noticia/noticias.service.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pages"></a>
+                        <span class="name">
+                            <b>
+                            pages</b>
+                            <a href="#pages"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/services/noticia/noticias.service.ts:30</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpClient, HttpHeaders, HttpParams } from &#x27;@angular/common/http&#x27;;
+import { MedioResponse, NoticiaResponse, RespuestaTopHeadLines, Medio, NoticasFecha, UserResponse, User, Noticia } from &#x27;../../interfaces/interfaces&#x27;;
+import { environment } from &#x27;../../../environments/environment&#x27;;
+
+import { Observable, timer } from &#x27;rxjs&#x27;;
+import { flatMap, map } from &quot;rxjs/operators&quot;;
+import { DataLocalService } from &#x27;../dataLocal/data-local.service&#x27;;
+
+const TIME_INTERVAL &#x3D; 300000; 
+/**
+ * @constant {string} apiKey contiene llave de coneccion a la api
+ */
+const apiKey&#x3D;environment.apikey;
+/**
+ * @constant {string} Url contiene la url de de coneccion a la api
+ */
+const Url&#x3D;environment.ApiUrl;
+
+const headers&#x3D; new HttpHeaders({
+  &#x27;X-Api-key&#x27;:apiKey
+});
+
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class NoticiasService {
+
+  pages&#x3D;0;
+  medioActual&#x3D;0;
+  categoriaPage&#x3D;0;
+
+  constructor( private http:HttpClient,private datal:DataLocalService) {
+    
+    if (datal.usuario) {
+     
+    //  this.recargar();
+    }
+     
+   }
+
+
+/**
+ * funcion encargada de ejecutar las llamadas de tipo GET a la api rest 
+ * @param {string} query cadena de coneccion 
+ * @param {any} params parametros que se necesiten 
+ * @returns {Observable}
+ */
+  private ejecutarQuery&lt;T&gt;(query:string,params?:any): Observable&lt;T&gt;{
+    query&#x3D;Url + query;
+    return this.http.get&lt;T&gt;(query,{headers,params:params});
+  }
+
+  /**
+ * funcion encargada de ejecutar las llamadas de tipo POST a la api rest 
+ * @param {string} query cadena de coneccion 
+ * @param {any} params parametros que se necesiten 
+ * @returns {Observable}
+ */
+  private ejecutarQueryP&lt;T&gt;(query:string,params?:any): Observable&lt;T&gt;{
+    query&#x3D;Url + query;
+    return this.http.post&lt;T&gt;(query,params);
+  }
+
+/**
+ *@ignore
+ */
+  getTopHeadLines(){
+    this.pages++;
+    // return this.http.get&lt;RespuestaTopHeadLines&gt;(&#x60;https://newsapi.org/v2/top-headlines?country&#x3D;us&amp;apiKey&#x3D;7490eb6283774faea78acce44f96e423&#x60;);
+    return this.ejecutarQuery&lt;RespuestaTopHeadLines&gt;(&#x60;/top-headlines?country&#x3D;us&amp;page&#x3D;${this.pages}&#x60;);
+  }
+
+  /**
+ * funcion que trae las noticias de la pagina principal
+ * @returns {Observable&lt;NoticiaResponse&gt;}
+ */
+  getNoticias(): Observable&lt;NoticiaResponse&gt;{
+    this.pages++;
+    // return this.http.get&lt;RespuestaTopHeadLines&gt;(&#x60;https://newsapi.org/v2/top-headlines?country&#x3D;us&amp;apiKey&#x3D;7490eb6283774faea78acce44f96e423&#x60;);
+    //  this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;true&#x60;);
+    // return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;false&amp;pag&#x3D;${this.pages}&#x60;);
+
+       
+   return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;false&amp;pag&#x3D;${this.pages}&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;);
+  
+  
+     
+    //  return  timer(0, TIME_INTERVAL).pipe(
+    //   map(()&#x3D;&gt;{
+    //     return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;true&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;).pipe(
+    //       flatMap(()&#x3D;&gt;{
+    //       return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;false&amp;pag&#x3D;${this.pages}&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;);
+    //       })
+    //     )
+    //   })
+    //  );
+  }
+
+
+/**
+ * Funcion que trae las noticias mas antiguas segun el ultimo id 
+ * @param  {any} ultimoId ultimo id de noticia traido 
+ * @returns  {Observable&lt;NoticiaResponse&gt;}
+ */
+  getNoticiasAntiguas(ultimoId:any): Observable&lt;NoticiaResponse&gt;{
+    this.pages++;  
+   return   this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;true&amp;ultimoid&#x3D;${ultimoId}&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;).pipe(
+         flatMap(()&#x3D;&gt;{
+         return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;false&amp;pag&#x3D;${this.pages}&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;)
+         })
+       )
+     
+  }
+
+  /**
+   * funcion que se encarga de volver a cargas las noticas del inicio
+   * @returns  {Observable&lt;NoticiaResponse&gt;}
+   */
+   recargar(): Observable&lt;NoticiaResponse&gt;{
+    return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;true&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&amp;pag&#x3D;${this.pages}&#x60;);
+  }
+
+  /**
+   * funcion encargada de traer los medios de un usuario y actualizarlos
+   * @returns {Observable&lt;MedioResponse&gt;}
+   */
+  getMedios(): Observable&lt;MedioResponse&gt;{
+    this.pages++;
+    // console.log(&quot;ey medios&quot;)
+    this.ejecutarQuery&lt;MedioResponse&gt;(&#x60;/medio/update?usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;).subscribe((resp)&#x3D;&gt;{
+      console.log(resp);
+      this.ejecutarQuery&lt;MedioResponse&gt;(&#x60;/medio/medios?usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;).subscribe(res&#x3D;&gt;{
+        
+      });
+
+    });
+    return this.ejecutarQuery&lt;MedioResponse&gt;(&#x60;/medio/medios?usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;);
+  }
+
+  /**
+   * funcion encaegada de hacer la consulta de busqueda de medios segun el termino enviado
+   * @param {string} termino parametro por el cual se buscara un medio
+   * @returns {Observable&lt;MedioResponse&gt;}
+   */
+  getSearchMedio(termino:string): Observable&lt;MedioResponse&gt;{
+   
+    // return this.http.get&lt;RespuestaTopHeadLines&gt;(&#x60;https://newsapi.org/v2/top-headlines?country&#x3D;us&amp;apiKey&#x3D;7490eb6283774faea78acce44f96e423&#x60;);
+    return this.ejecutarQuery&lt;MedioResponse&gt;(&#x60;/medio/buscar?medio&#x3D;${termino}&#x60;);
+  }
+
+
+  /**
+   * funcion encargada de traer las noticias segun el medio especificado y el ultimo id
+   * @param {number} medio id del medio
+   * @param {number} ultimoId ultimo id de noticia generado del medio 
+   * @returns {Observable&lt;NoticiaResponse&gt;}
+   */
+  getNoticiasMedio( medio :number,ultimoId?:number): Observable&lt;NoticiaResponse&gt;{
+    if (this.medioActual&#x3D;&#x3D;&#x3D;medio) {
+      this.categoriaPage++;
+    }else{
+      this.categoriaPage&#x3D;1;
+      this.medioActual&#x3D;medio;
+    }
+    if (ultimoId) {
+      console.log(&quot;if&quot;)
+      return   this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;true&amp;ultimoid&#x3D;${ultimoId}&amp;medio&#x3D;${medio}&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;).pipe(
+        flatMap(()&#x3D;&gt;{
+          return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;false&amp;pag&#x3D;${this.categoriaPage}&amp;medio&#x3D;${medio}&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;);
+        })
+      );
+      
+    } else {
+      // console.log(&quot;else&quot;)
+    return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias?consultar&#x3D;false&amp;pag&#x3D;${this.categoriaPage}&amp;medio&#x3D;${medio}&amp;usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;);
+      
+    }
+  
+  }
+
+/**
+ * funcion encargada de guardar  un medio
+ * @param {Medio} medio un objeto de tipo medio
+ * @returns {Observable&lt;Medio&gt;}
+ */
+  guargarMedio(medio:Medio): Observable&lt;Medio&gt;{
+     console.log(medio); 
+     return this.ejecutarQuery&lt;Medio&gt;(&#x60;/medio/guardar?usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;,medio);
+  }
+
+ 
+/**
+ * funcion encargada de traer las noticias de un medio desde un rango de fechas predeterminado 
+ * @param fechaIn fecha de inicio de la busqueda
+ * @param fechaF fecha final de la busqueda
+ * @param medio id del medio de busqueda
+ * @param {string} tipo  tipo de busqueda ASC/DESC
+ * @returns {Observable&lt;NoticasFecha&gt;}
+ */
+  getNoticiasFecha(fechaIn,fechaF,medio?,tipo?: string): Observable&lt;NoticasFecha&gt;{
+    let params &#x3D; new HttpParams()
+    // .set(&#x27;inicio&#x27;, fechaIn).
+    // set(&#x27;fin&#x27;,fechaF).
+    .set(&#x27;medio&#x27;,medio).
+    set(&#x27;tipo&#x27;,tipo);
+    console.log(tipo);
+    return this.ejecutarQuery&lt;NoticasFecha&gt;(&#x60;/noticias/reporte?inicio&#x3D;${fechaIn}&amp;fin&#x3D;${fechaF}&#x60;,params);
+  }
+
+/**
+ * funcionencargada de eliminar un medio de la lista de medios de un usuario
+ * @param {number} medio id del medio
+ * @returns {Observable&lt;MedioResponse&gt;}
+ */
+  eliminarMedio(medio:number): Observable&lt;MedioResponse&gt;{
+     return this.ejecutarQuery&lt;MedioResponse&gt;(&#x60;/medio/eliminar?usuario&#x3D;${this.datal.usuario.usuario_id}&amp;medio&#x3D;${medio}&#x60;);
+  }
+
+/**
+ *funcion encargada de guardar una noticia en favoritos
+ * @param {Noticia} noticia un objeto de tipo Noticia 
+ * @returns {Observable&lt;NoticiaResponse&gt;}
+ */
+  guardarFavorito(noticia:Noticia): Observable&lt;NoticiaResponse&gt;{
+    console.log(noticia)
+    return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias/favoritos/guardar?usuario&#x3D;${this.datal.usuario.usuario_id}&amp;noticia&#x3D;${noticia.id}&#x60;);
+  }
+
+  /**
+   *funcion encargada de eliminar una noticia en favoritos 
+   * @param {Noticia} noticia un objeto de tipo Noticia 
+   * @returns {Observable&lt;NoticiaResponse&gt;}
+   */
+  eliminarFavorito(noticia:Noticia): Observable&lt;NoticiaResponse&gt;{
+    return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias/favoritos/eliminar?usuario&#x3D;${this.datal.usuario.usuario_id}&amp;noticia&#x3D;${noticia.id}&#x60;);
+  }
+
+  /**
+   * funcion encargada de traer todas las noticias que un usuario tenga agregada en favoritos
+   * @returns {Observable&lt;NoticiaResponse&gt;}
+   */
+  getFavorito(): Observable&lt;NoticiaResponse&gt;{
+    return this.ejecutarQuery&lt;NoticiaResponse&gt;(&#x60;/noticias/favoritos?usuario&#x3D;${this.datal.usuario.usuario_id}&#x60;);
+  }
+
+//?LOS METODOS PARA LOGIN Y REGISTRO
+/**
+ * funcion encargada de ejecutar el login de un usuario
+ * @param {string} nick nick del usuario
+ * @param {string} passsword contraseña del usuario
+ * @returns {Observable&lt;UserResponse&gt;}
+ */
+  login(nick: string,passsword: string): Observable&lt;UserResponse&gt;{
+
+    let params &#x3D; {
+    usuario:nick ,
+    clave:passsword,
+    }
+    return this.ejecutarQueryP&lt;UserResponse&gt;(&#x60;/users/login&#x60;,params);
+  }
+
+  /**
+   * funcion encargada de registrar un usuario
+   * @param {User} user un objeto de tipo User
+   * @returns {Observable&lt;UserResponse&gt;}
+   */
+  register(user:User): Observable&lt;UserResponse&gt;{
+    
+    return this.ejecutarQueryP&lt;UserResponse&gt;(&#x60;/users/register&#x60;,user);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'NoticiasService.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

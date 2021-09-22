@@ -24,22 +24,20 @@ export class Tab4Page implements OnInit {
          this.medios.push(m);
        })
      });
-     console.log(this.medios)
+    //  console.log(this.medios)
   }
  
  
   Buscar(parametro){
-    console.log(parametro)
     let v:string=parametro.value;
-    console.log(v)
     if (v.length>0) {
       this.medios=[];
       this.noticiasService.getSearchMedio(v).subscribe(medio=>{
         medio.forEach(m=>{
+        // medio.resp.forEach(m=>{
           this.medios.push(m);
         })
       });
-      console.log(this.medios)
     }else{
       this.cargarMedios();
     }

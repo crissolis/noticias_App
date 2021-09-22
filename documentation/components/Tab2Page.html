@@ -1,0 +1,1230 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>noticias_app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">noticias_app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>Tab2Page</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/pages/tab2/tab2.page.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-tab2</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>tab2.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>tab2.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#categoria">categoria</a>
+                            </li>
+                            <li>
+                                <a href="#categorias">categorias</a>
+                            </li>
+                            <li>
+                                <a href="#categoriaSelect">categoriaSelect</a>
+                            </li>
+                            <li>
+                                <a href="#f">f</a>
+                            </li>
+                            <li>
+                                <a href="#i">i</a>
+                            </li>
+                            <li>
+                                <a href="#noticias">noticias</a>
+                            </li>
+                            <li>
+                                <a href="#segment">segment</a>
+                            </li>
+                            <li>
+                                <a href="#tipo">tipo</a>
+                            </li>
+                            <li>
+                                <a href="#tipos">tipos</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#cargarNoticiasCateg">cargarNoticiasCateg</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#presentModal">presentModal</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#presentModalR">presentModalR</a>
+                            </li>
+                            <li>
+                                <a href="#selectipo">selectipo</a>
+                            </li>
+                            <li>
+                                <a href="#tiempo">tiempo</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(noticiasService: <a href="../injectables/NoticiasService.html">NoticiasService</a>, modalController: ModalController)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:40</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>noticiasService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/NoticiasService.html" target="_self" >NoticiasService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalController</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cargarNoticiasCateg"></a>
+                    <span class="name">
+                        <b>
+                            cargarNoticiasCateg
+                        </b>
+                        <a href="#cargarNoticiasCateg"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cargarNoticiasCateg(categoria: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>, tipo)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/app/pages/tab2/tab2.page.ts:60</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>categoria</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>tipo</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/pages/tab2/tab2.page.ts:55</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="presentModal"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            presentModal
+                        </b>
+                        <a href="#presentModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>presentModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">src/app/pages/tab2/tab2.page.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="presentModalR"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            presentModalR
+                        </b>
+                        <a href="#presentModalR"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>presentModalR()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="106"
+                            class="link-to-prism">src/app/pages/tab2/tab2.page.ts:106</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="selectipo"></a>
+                    <span class="name">
+                        <b>
+                            selectipo
+                        </b>
+                        <a href="#selectipo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>selectipo(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="113"
+                            class="link-to-prism">src/app/pages/tab2/tab2.page.ts:113</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tiempo"></a>
+                    <span class="name">
+                        <b>
+                            tiempo
+                        </b>
+                        <a href="#tiempo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>tiempo(fecha: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/pages/tab2/tab2.page.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>fecha</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categoria"></a>
+                        <span class="name">
+                            <b>
+                            categoria</b>
+                            <a href="#categoria"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="37" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:37</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categorias"></a>
+                        <span class="name">
+                            <b>
+                            categorias</b>
+                            <a href="#categorias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Medio.html" target="_self" >Medio[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="categoriaSelect"></a>
+                        <span class="name">
+                            <b>
+                            categoriaSelect</b>
+                            <a href="#categoriaSelect"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Medio.html" target="_self" >Medio</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:23</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="f"></a>
+                        <span class="name">
+                            <b>
+                            f</b>
+                            <a href="#f"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Date()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:40</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="i"></a>
+                        <span class="name">
+                            <b>
+                            i</b>
+                            <a href="#i"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Date()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:39</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="noticias"></a>
+                        <span class="name">
+                            <b>
+                            noticias</b>
+                            <a href="#noticias"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Noticia.html" target="_self" >Noticia[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="segment"></a>
+                        <span class="name">
+                            <b>
+                            segment</b>
+                            <a href="#segment"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>IonSegment</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @ViewChild(IonSegment)<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tipo"></a>
+                        <span class="name">
+                            <b>
+                            tipo</b>
+                            <a href="#tipo"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:38</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tipos"></a>
+                        <span class="name">
+                            <b>
+                            tipos</b>
+                            <a href="#tipos"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+    {
+      nombre: &#x27;positivas&#x27;,
+      id:0,
+      q:&#x27;DESC&#x27;
+    },
+    {
+      nombre: &#x27;negativas&#x27;,
+     id:1,
+     q:&#x27;ASC&#x27;
+    },
+  ]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/pages/tab2/tab2.page.ts:24</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ViewChild, OnInit } from &#x27;@angular/core&#x27;;
+import { IonSegment, ModalController } from &#x27;@ionic/angular&#x27;;
+import { NoticiasService } from &#x27;../../services/noticia/noticias.service&#x27;;
+import { Article } from &#x27;src/app/interfaces/interfaces&#x27;;
+import { Noticia, Medio } from &#x27;../../interfaces/interfaces&#x27;;
+import { NoticiasModalComponent } from &#x27;../../components/noticias-modal/noticias-modal.component&#x27;;
+import { NoticiasModalReportComponent } from &#x27;../../components/noticias-modal-report/noticias-modal-report.component&#x27;;
+
+@Component({
+  selector: &#x27;app-tab2&#x27;,
+  templateUrl: &#x27;tab2.page.html&#x27;,
+  styleUrls: [&#x27;tab2.page.scss&#x27;]
+})
+export class Tab2Page implements OnInit {
+
+  @ViewChild (IonSegment) segment:IonSegment;
+  noticias:Noticia[]&#x3D;[];
+  categorias:Medio[]&#x3D;[];
+
+  
+  
+   
+  categoriaSelect:Medio;
+  tipos &#x3D; [
+    {
+      nombre: &#x27;positivas&#x27;,
+      id:0,
+      q:&#x27;DESC&#x27;
+    },
+    {
+      nombre: &#x27;negativas&#x27;,
+     id:1,
+     q:&#x27;ASC&#x27;
+    },
+  ]
+
+  categoria&#x3D;0;
+  tipo&#x3D;0;
+   i:Date&#x3D;new Date();
+   f:Date&#x3D;new Date();
+
+
+  constructor( private noticiasService:NoticiasService,private modalController:ModalController) {
+    noticiasService.getMedios().subscribe(med&#x3D;&gt;{
+      this.categorias&#x3D;med.resp;
+     console.log(med)
+      this.cargarNoticiasCateg(this.categorias[0].medio_id,this.tipo);
+
+    });
+    
+    console.log(this.i.getMonth(),this.f.getMonth())
+   
+  }
+
+  ngOnInit(){ 
+    // this.segment.value&#x3D;this.categorias[0];
+   
+  }
+
+  cargarNoticiasCateg(categoria:number,tipo){
+    console.log(categoria);
+    console.log(this.tipo);
+    this.noticias&#x3D;[];
+      if (this.categoria!&#x3D;&#x3D;categoria) {
+        this.noticias&#x3D;[];
+      }
+      this.categoria&#x3D;categoria;
+      this.tipo&#x3D;tipo;
+    let  fi&#x3D;this.tiempo(this.i);
+          fi&#x3D;&#x60;${fi} 00:00:00&#x60;;
+        
+    let  ff&#x3D;this.tiempo(this.f);
+          ff&#x3D;&#x60;${ff} 23:59:59&#x60;;
+    console.log(fi,ff)
+      //  let id&#x3D;this.noticias[this.noticias.length - 1].id;
+      
+        this.noticiasService.getNoticiasFecha(fi,ff,categoria,this.tipos[tipo].q).subscribe(datos&#x3D;&gt;{
+          console.log(datos),
+        datos.noticias.forEach(not &#x3D;&gt; {
+          console.log(not)
+          let n&#x3D; this.noticias.find(notic&#x3D;&gt;notic.id&#x3D;&#x3D;&#x3D;not.id);
+            if (n) {
+              return;
+            }else{
+              this.noticias.push( not );
+            }
+          });
+  
+       });
+      
+       
+  
+  }
+
+  // loadData(event){
+  //  this.cargarNoticiasCateg(this.categoria,event);
+  // }
+
+  async presentModal() {
+    const modal &#x3D; await this.modalController.create({
+      component: NoticiasModalComponent,
+    });
+    return await modal.present();
+  }
+
+  async presentModalR(){
+    const modal &#x3D; await this.modalController.create({
+      component: NoticiasModalReportComponent,
+    });
+    return await modal.present();
+  }
+
+  selectipo(id:number){
+    // console.log(this.categoria,id);
+    this.tipo&#x3D;id;
+    this.cargarNoticiasCateg(this.categoria,this.tipo);
+  }
+
+
+  tiempo(fecha: Date) {
+    let day &#x3D; fecha.getDate()
+    let month &#x3D; fecha.getMonth() +1
+    let year &#x3D; fecha.getFullYear()
+
+    // let day &#x3D; fecha.getUTCDay()
+    // let month &#x3D; fecha.getDate()
+    // let year &#x3D; fecha.getUTCFullYear()
+
+    let  hora&#x3D;fecha.getHours();
+    let  min&#x3D;fecha.getMinutes();
+    let  sec&#x3D;fecha.getSeconds();
+
+   
+
+    let des: string;
+    if (month &lt; 10) {
+      des &#x3D; &#x60;${year}-0${month}-${day}&#x60;;
+    } else {
+      des &#x3D; &#x60;${year}-${month}-${day}&#x60;;
+    }
+    return des;
+  }
+
+}
+
+
+// if (month &lt; 10) {
+//   des &#x3D; &#x60;${year}-0${month}-${day} ${hora}:${min}:${sec}&#x60;;
+// } else {
+//   des &#x3D; &#x60;${year}-${month}-${day} ${hora}:${min}:${sec}&#x60;;
+// }</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header [translucent]&#x3D;&quot;true&quot; class&#x3D;&quot;ion-no-border&quot; &gt;
+  &lt;ion-toolbar  color&#x3D;&quot;dark&quot;&gt;
+    &lt;ion-title&gt;
+      Reporte
+    &lt;/ion-title&gt;
+    &lt;ion-buttons slot&#x3D;&quot;end&quot;&gt;   
+      &lt;ion-button  (click)&#x3D;&quot;presentModal()&quot; expand&#x3D;&quot;block&quot;&gt;
+        &lt;ion-icon slot&#x3D;&quot;end&quot; name&#x3D;&quot;globe&quot;&gt;&lt;/ion-icon&gt;
+      &lt;/ion-button&gt;
+      
+        &lt;ion-button  (click)&#x3D;&quot;presentModalR()&quot; expand&#x3D;&quot;block&quot;&gt;
+          &lt;ion-icon slot&#x3D;&quot;end&quot; name&#x3D;&quot;pie-chart&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/ion-button&gt;
+  &lt;/ion-buttons&gt;
+  &lt;/ion-toolbar&gt;
+  
+  &lt;ion-segment  [value]&#x3D;&quot;categorias[0]&quot;  scrollable mode&#x3D;&quot;md&quot; &gt;
+    &lt;ion-segment-button [value]&#x3D;&quot;categoria&quot; mode&#x3D;&quot;md&quot; 
+    (click)&#x3D;&quot;cargarNoticiasCateg(categoria.medio_id,tipo)&quot;  *ngFor&#x3D;&quot;let categoria of categorias&quot;&gt;
+      &lt;ion-label  class&#x3D;&quot;ion-text-capitalize&quot;&gt;  {{ categoria.nombre }}&lt;/ion-label&gt;
+    &lt;/ion-segment-button&gt;
+  &lt;/ion-segment&gt;
+   
+  &lt;ion-segment  [value]&#x3D;&quot;tipos[0]&quot;  scrollable mode&#x3D;&quot;md&quot; &gt;
+    &lt;ion-segment-button [value]&#x3D;&quot;tipo&quot; mode&#x3D;&quot;md&quot; 
+    (click)&#x3D;&quot;selectipo(tipo.id)&quot;  *ngFor&#x3D;&quot;let tipo of tipos; let i&#x3D;index&quot;&gt; 
+      &lt;ion-label  class&#x3D;&quot;ion-text-capitalize&quot;&gt;  {{ tipo.nombre }}&lt;/ion-label&gt;
+    &lt;/ion-segment-button&gt;
+  &lt;/ion-segment&gt;
+  
+&lt;/ion-header&gt;
+
+&lt;ion-content [fullscreen]&#x3D;&quot;true&quot;&gt;
+  &lt;!-- &lt;div *ngFor&#x3D;&quot;let grafico of graficos&quot; style&#x3D;&quot;display: block&quot;&gt;
+                &lt;app-grafico-dona  [hola]&#x3D;&quot;hola&quot;
+                [doughnutChartLabels]&#x3D;&quot;grafico.labels&quot;
+                [doughnutChartData]&#x3D;&quot;grafico.data&quot;
+                doughnutChartType&#x3D;&quot;doughnut&quot;
+                 &gt;&lt;/app-grafico-dona&gt;     
+    &lt;/div&gt; --&gt;
+    &lt;app-noticias [noticias]&#x3D;&quot;noticias&quot;&gt;&lt;/app-noticias&gt; 
+&lt;/ion-content&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>tab2.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+ion-segment-button{
+    background-color: var( --ion-color-dark) !important;
+    color: white !important;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header [translucent]="true" class="ion-no-border" >  <ion-toolbar  color="dark">    <ion-title>      Reporte    </ion-title>    <ion-buttons slot="end">         <ion-button  (click)="presentModal()" expand="block">        <ion-icon slot="end" name="globe"></ion-icon>      </ion-button>              <ion-button  (click)="presentModalR()" expand="block">          <ion-icon slot="end" name="pie-chart"></ion-icon>        </ion-button>  </ion-buttons>  </ion-toolbar>    <ion-segment  [value]="categorias[0]"  scrollable mode="md" >    <ion-segment-button [value]="categoria" mode="md"     (click)="cargarNoticiasCateg(categoria.medio_id,tipo)"  *ngFor="let categoria of categorias">      <ion-label  class="ion-text-capitalize">  {{ categoria.nombre }}</ion-label>    </ion-segment-button>  </ion-segment>     <ion-segment  [value]="tipos[0]"  scrollable mode="md" >    <ion-segment-button [value]="tipo" mode="md"     (click)="selectipo(tipo.id)"  *ngFor="let tipo of tipos; let i=index">       <ion-label  class="ion-text-capitalize">  {{ tipo.nombre }}</ion-label>    </ion-segment-button>  </ion-segment>  </ion-header><ion-content [fullscreen]="true">  <!-- <div *ngFor="let grafico of graficos" style="display: block">                <app-grafico-dona  [hola]="hola"                [doughnutChartLabels]="grafico.labels"                [doughnutChartData]="grafico.data"                doughnutChartType="doughnut"                 ></app-grafico-dona>         </div> -->    <app-noticias [noticias]="noticias"></app-noticias> </ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ForgotPasswordPage', 'selector': 'app-forgot-password'},{'name': 'GraficoDonaComponent', 'selector': 'app-grafico-dona'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'MediosComponent', 'selector': 'app-medios'},{'name': 'NoticiaComponent', 'selector': 'app-noticia'},{'name': 'NoticiasComponent', 'selector': 'app-noticias'},{'name': 'NoticiasModalComponent', 'selector': 'app-noticias-modal'},{'name': 'NoticiasModalReportComponent', 'selector': 'app-noticias-modal-report'},{'name': 'RegistrationPage', 'selector': 'app-registration'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'Tab4Page', 'selector': 'app-tab4'},{'name': 'TabsPage', 'selector': 'app-tabs'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'Tab2Page'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'Tab2Page.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

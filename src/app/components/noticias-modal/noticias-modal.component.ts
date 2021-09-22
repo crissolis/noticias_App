@@ -23,7 +23,7 @@ export class NoticiasModalComponent implements OnInit {
 
   ngOnInit() {}
   cargarNoticiasCateg(categoria:number,event?){
-    console.log(categoria);
+    // console.log(categoria);
     
       if (this.categoria!==categoria) {
         this.noticias=[];
@@ -50,14 +50,14 @@ export class NoticiasModalComponent implements OnInit {
           return;
         }
         if (event) {
-          console.log(this.noticias)
+          // console.log(this.noticias)
           event.target.complete();
         }
        })
       
        }else{
         this.noticiasService.getNoticiasMedio(categoria).subscribe(datos=>{
-          console.log(datos)
+          // console.log(datos)
           datos.noticias.forEach(not => {
             let n= this.noticias.find(notic=>notic.id===not.id);
               if (n) {

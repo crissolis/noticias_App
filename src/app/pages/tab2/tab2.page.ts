@@ -28,7 +28,7 @@ export class Tab2Page implements OnInit {
       q:'DESC'
     },
     {
-      nombre: 'negaivas',
+      nombre: 'negativas',
      id:1,
      q:'ASC'
     },
@@ -43,12 +43,12 @@ export class Tab2Page implements OnInit {
   constructor( private noticiasService:NoticiasService,private modalController:ModalController) {
     noticiasService.getMedios().subscribe(med=>{
       this.categorias=med.resp;
-     console.log(med)
+    //  console.log(med)
       this.cargarNoticiasCateg(this.categorias[0].medio_id,this.tipo);
 
     });
     
-    console.log(this.i.getMonth(),this.f.getMonth())
+    // console.log(this.i.getMonth(),this.f.getMonth())
    
   }
 
@@ -58,8 +58,8 @@ export class Tab2Page implements OnInit {
   }
 
   cargarNoticiasCateg(categoria:number,tipo){
-    console.log(categoria);
-    console.log(this.tipo);
+    // console.log(categoria);
+    // console.log(this.tipo);
     this.noticias=[];
       if (this.categoria!==categoria) {
         this.noticias=[];
@@ -71,13 +71,12 @@ export class Tab2Page implements OnInit {
         
     let  ff=this.tiempo(this.f);
           ff=`${ff} 23:59:59`;
-    console.log(fi,ff)
+    // console.log(fi,ff)
       //  let id=this.noticias[this.noticias.length - 1].id;
       
         this.noticiasService.getNoticiasFecha(fi,ff,categoria,this.tipos[tipo].q).subscribe(datos=>{
-          console.log(datos),
         datos.noticias.forEach(not => {
-          console.log(not)
+          // console.log(not)
           let n= this.noticias.find(notic=>notic.id===not.id);
             if (n) {
               return;

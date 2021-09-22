@@ -18,7 +18,8 @@ export class RegistrationPage implements OnInit {
     correo:"",
     password:"",
   }
-  y
+
+  valida:boolean=false;
   presentar:boolean=false;
   constructor(private router:Router,private noticiasService:NoticiasService,
     private toastController: ToastController) { }
@@ -39,7 +40,7 @@ export class RegistrationPage implements OnInit {
       this.presentar=true;
       
 
-      console.log(this.user);
+      // console.log(this.user);
       this.noticiasService.register(this.user).subscribe(resp=>{
         this.presentar=false;
         if (resp.status==="400") {
@@ -76,4 +77,21 @@ export class RegistrationPage implements OnInit {
     toast.present();
   }
 
+
+  validarPass(event){
+    const regex = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/gi;
+    var pass:string=event.value;
+
+    if (pass.length>0) {
+      pass.replace(/ /g, "");
+      if (regex.test(pass)) {
+        this.valida=false;
+      }else{
+        this.valida=true;
+      }
+    }
+
+    
+    
+  }
 }

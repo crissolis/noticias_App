@@ -20,7 +20,7 @@
   <ion-card-content>
     <p>
       {{toTex(noticia.contenido)}}
-      <img [src]="retornarIcon(noticia.porcentaje)" class="iconoPor" />  
+      <img [src]="retornarIcon(noticia.porcentaje).icon" [class]="retornarIcon(noticia.porcentaje).class" />  
       <!-- {{ noticia.media_url}} -->
     </p>
     <ion-label> <strong>Enlaces :</strong></ion-label>

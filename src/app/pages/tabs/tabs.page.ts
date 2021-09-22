@@ -11,7 +11,7 @@ export class TabsPage {
 
   constructor(private dataLocal:DataLocalService,private notciasService:NoticiasService) {
    notciasService.getFavorito().subscribe(resp=>{
-     console.log(resp);
+    //  console.log(resp);
      dataLocal.cargarFavoritos(resp.noticias);
    })
   }
